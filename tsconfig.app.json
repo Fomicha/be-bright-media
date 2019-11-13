@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": []
+  },
+  "files": [
+    "be-bright-web/main.ts",
+    "be-bright-web/polyfills.ts"
+  ],
+  "include": [
+    "be-bright-web/**/*.ts"
+  ],
+  "exclude": [
+    "be-bright-web/test.ts",
+    "be-bright-web/**/*.spec.ts"
+  ]
+}
