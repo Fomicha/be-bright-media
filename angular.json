@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "be-bright-web",
-      "prefix": "app",
+      "prefix": "bb",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

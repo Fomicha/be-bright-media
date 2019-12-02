@@ -1,0 +1,24 @@
+@import "./../../sass/index";
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  height: 90px;
+  background-color: transparent;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 50%;
+    height: 100%;
+    padding: 0 5%;
+  }
+
+  &__nav {
+    @include Text-Normal(18px, 21px);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

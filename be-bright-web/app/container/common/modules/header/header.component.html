@@ -1,0 +1,9 @@
+<div class="header">
+  <div class="header__wrapper">
+    <a class="header__nav"
+         *ngFor="let pages of navigations"
+       [routerLink]="pages.link">
+      {{pages.linkName}}
+    </a>
+  </div>
+</div>
