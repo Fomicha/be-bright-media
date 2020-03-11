@@ -4,13 +4,15 @@ import {CommonModule} from '@angular/common';
 import {HomePageModule} from './modules/home-page/home-page.module';
 import {ContainerRouter} from './container.routing';
 import { HeaderModule } from './common/modules/header/header.module';
+import {AboutPageModule} from './modules/about-page/about-page.module';
 
 @NgModule({
   imports: [
     CommonModule,
     HomePageModule,
     ContainerRouter,
-    HeaderModule
+    HeaderModule,
+    AboutPageModule
   ],
   declarations: [
     ContainerComponent

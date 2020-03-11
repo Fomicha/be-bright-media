@@ -5,6 +5,11 @@ import { AppRouting } from './app.routing';
 import { AppComponent } from './app.component';
 import { ContainerModule } from './container/container.module';
 
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {environment} from '../environments/environment';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +17,9 @@ import { ContainerModule } from './container/container.module';
   imports: [
     BrowserModule,
     AppRouting,
-    ContainerModule
+    ContainerModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

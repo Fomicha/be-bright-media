@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyCjSU8OBA5n37IN9yTPQlD20qUdWDRKWzc',
+    authDomain: 'be-bright-media.firebaseapp.com',
+    databaseURL: 'https://be-bright-media.firebaseio.com',
+    projectId: 'be-bright-media',
+    storageBucket: 'be-bright-media.appspot.com',
+    messagingSenderId: '1045496756884',
+    appId: '1:1045496756884:web:1b70649e3c54a4ae48d281'
+  }
 };
 
 /*

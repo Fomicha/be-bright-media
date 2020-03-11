@@ -1,1 +1,29 @@
-<p>home-page works!</p>
+<div class="home-page">
+  <div class="home-page__slider">
+    <ngb-carousel class="home-page__slider-wrapper"
+                  #carousel
+                  [showNavigationArrows]="showNavigationArrows"
+                  [showNavigationIndicators]="showNavigationIndicators">
+      <ng-template ngbSlide
+                   class="home-page__slider-item"
+                   *ngFor="let img of images">
+        <div class="home-page__img-wrapper"
+             [style.background-image]="'url('+ img +')'">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+
+  <div class="home-page__info">
+    <h1 class="home-page__title">
+      ALEX SAMSONOV
+    </h1>
+    <h4 class="home-page__subtitle">
+      pornography
+    </h4>
+    <a class="home-page__phone-number"
+       href="tel: +380502181596">
+      +38 050 218 15 96
+    </a>
+  </div>
+</div>
