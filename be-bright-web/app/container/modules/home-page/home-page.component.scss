@@ -1,5 +1,6 @@
 @import "be-bright-web/styles";
-@import "home-page-carousel.component";
+
+$border: 2px solid $color-white;
 
 .home-page {
   display: flex;
@@ -13,6 +14,7 @@
     height: 100%;
     box-shadow: 5px 0px 10px 0px rgba(0,0,0,0.34);
     outline: 0;
+    z-index: $layer-over-material-cdk;
   }
 
   &__info {
@@ -52,6 +54,26 @@
     left: 0!important;
     top: 0!important;
     outline: 0;
+  }
+
+  &__img-link-to-cat-page {
+    @include Text-Normal(24px, 28px, $color-white);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: $border;
+    border-bottom: $border;
+    cursor: pointer;
+    padding: 5px;
+
+    &:hover {
+      text-decoration: none !important;
+    }
   }
 
   &__title {

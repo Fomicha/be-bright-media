@@ -9,6 +9,10 @@
                    *ngFor="let img of images">
         <div class="home-page__img-wrapper"
              [style.background-image]="'url('+ img +')'">
+          <a class="home-page__img-link-to-cat-page"
+             [routerLink]="['/']">
+              View more
+          </a>
         </div>
       </ng-template>
     </ngb-carousel>
