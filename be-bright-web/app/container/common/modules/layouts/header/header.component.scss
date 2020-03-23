@@ -5,32 +5,65 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  justify-content: flex-end;
-  height: 90px;
-  background-color: transparent;
+  width: 80%;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  background-color: $color-white;
+  opacity: .95;
   z-index: $material-overlay;
+
+  @include breakpoint($media-desktop) {
+    width: 100%;
+    background-color: transparent;
+    align-items: unset;
+    height: 90px;
+    justify-content: flex-end;
+  }
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 50%;
+    align-items: flex-start;
+    width: 100%;
     height: 100%;
-    padding: 0 5%;
+    padding: 100px 10% 0;
+    flex-direction: column;
+
+    @include breakpoint($media-small-desktop) {
+      padding: 0 2%;
+    }
+
+    @include breakpoint($media-desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 5%;
+    }
   }
 
   &__nav {
     @include Text-Normal(18px, 21px);
+    display: flex;
+    align-items: center;
     text-decoration: none;
     text-transform: uppercase;
     transition: .3s ease-in-out;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
 
     @include breakpoint($media-tablet) {
       &:hover {
         @include Text-Normal(18px, 21px);
         text-decoration: none !important;
       }
+    }
+
+    @include breakpoint($media-desktop) {
+      margin-bottom: 0;
+      width: unset;
+      height: unset;
+      align-content: unset;
     }
 
     &:hover {
@@ -41,6 +74,37 @@
 
     &_active {
       text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__mobile-close {
+    display: block;
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+
+    &:before, &:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: $color-icon;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    @include breakpoint($media-desktop) {
+      display: none;
     }
   }
 }
