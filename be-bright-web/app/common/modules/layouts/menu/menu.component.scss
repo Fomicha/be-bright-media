@@ -1,0 +1,66 @@
+@import "../../../sass/index";
+
+.bb-menu {
+  width: 80%;
+  background: $color-white;
+  opacity: .8;
+  height: 100%;
+  padding: 85px 32px 0 32px;
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+
+  &__nav {
+    @include Text-Normal(18px, 21px);
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
+    &_active {
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      text-decoration: none;
+    }
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+  &__mobile-menu-close {
+    display: block;
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    z-index: $layer-dropdown;
+
+    &:before, &:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: $color-icon;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    @include breakpoint($media-small-desktop) {
+      display: none;
+    }
+  }
+}

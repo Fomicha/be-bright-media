@@ -1,0 +1,18 @@
+<section class="header">
+  <div class="header__container">
+    <div class="header__wrapper">
+      <a class="header__nav"
+         *ngFor="let pages of navigationsLinks"
+         [routerLink]="[pages.link]"
+         routerLinkActive="header__nav_active">
+        {{pages.linkName}}
+      </a>
+    </div>
+  </div>
+  <div *ngIf="isCloseIconShown"
+       class="header__mobile-menu-wrapper"
+       (click)="menuToggle()">
+    <div class="header__mobile-menu-icon"></div>
+  </div>
+</section>
+

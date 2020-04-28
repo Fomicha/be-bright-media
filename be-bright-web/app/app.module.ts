@@ -1,27 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRouting } from './app.routing';
+import {AppRoutes} from './app.routing';
 import { AppComponent } from './app.component';
-import { ContainerModule } from './container/container.module';
 
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {environment} from '../environments/environment';
+import {SharedModule} from './common/modules/shared.module';
+import {MetaModule} from '@ngx-meta/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRouting,
-    ContainerModule,
+    AppRoutes,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    SharedModule.forRoot(),
+    MetaModule.forRoot(),
+    BrowserAnimationsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

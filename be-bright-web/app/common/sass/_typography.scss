@@ -1,0 +1,43 @@
+@import "colors";
+
+$font-family: 'Roboto' !default;
+$font-family-light: 'Roboto Light';
+$font-size-xs: 10px;
+$font-size-s: 12px;
+$font-size-m: 14px;
+$font-size-l: 16px;
+$font-size-xl: 18px;
+
+@mixin Text-Normal($font-size, $line-height, $color: $dark-gray) {
+  font-family: $font-family, sans-serif;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: normal;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin Text-Medium($font-size, $line-height, $color: $dark-gray) {
+  @include Text-Normal($font-size, $line-height, $color);
+  font-weight: 500;
+}
+
+@mixin Text-Bold($font-size, $line-height, $color: $dark-gray) {
+  @include Text-Normal($font-size, $line-height, $color);
+  font-weight: 600;
+}
+
+@mixin Text-Strong-Bold($font-size, $line-height, $color: $dark-gray) {
+  @include Text-Normal($font-size, $line-height, $color);
+  font-weight: 700;
+}
+
+@mixin Text-Normal-light($font-size, $line-height, $color: $dark-gray) {
+  font-family: $font-family-light, sans-serif;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: normal;
+  line-height: $line-height;
+  color: $color;
+}
+

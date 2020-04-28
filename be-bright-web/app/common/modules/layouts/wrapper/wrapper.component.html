@@ -1,0 +1,22 @@
+<ng-container>
+  <ng-container *ngTemplateOutlet="menuTemplate"></ng-container>
+</ng-container>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <bb-menu (onMenuToggle)="sidenav.toggle() && toggleMobileIcon()"></bb-menu>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <main role="main">
+      <section>
+        <router-outlet></router-outlet>
+      </section>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<ng-template #menuTemplate>
+  <bb-header (onMenuToggle)="sidenav.toggle() && toggleMobileIcon()"
+             [isCloseIconShown]="isOpenMenuIconShown"></bb-header>
+<ng-template></ng-template>

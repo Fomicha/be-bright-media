@@ -1,0 +1,12 @@
+<section class="bb-menu">
+  <div class="bb-menu__wrapper">
+    <a class="bb-menu__nav"
+       *ngFor="let pages of navigationsLinks"
+       [routerLink]="[pages.link]"
+       routerLinkActive="bb-menu__nav_active">
+      {{pages.linkName}}
+    </a>
+  </div>
+  <div class="bb-menu__mobile-menu-close"
+       (click)="menuToggle()"></div>
+</section>
