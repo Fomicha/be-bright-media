@@ -4,7 +4,8 @@
 /dist
 /tmp
 /out-tsc
-/environments
+/be-bright-web/environments
+/public
 
 # Only exists if Bazel was run
 /bazel-out
@@ -53,3 +54,7 @@ Thumbs.db
 farebase.json
 firestore.rules
 database.rules.json
+
+#env
+environment.prod.ts
+environment.ts
