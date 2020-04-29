@@ -133,6 +133,7 @@ $border: 2px solid $color-white;
     @include Text-Normal-light(18px, 21px, $color-white);
     position: absolute;
     bottom: 25px;
+    text-decoration: none;
 
     @include breakpoint($media-small-desktop) {
       @include Text-Normal-light(18px, 21px, $color-title);
