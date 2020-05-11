@@ -3,8 +3,12 @@
 </ng-container>
 
 <mat-sidenav-container>
-  <mat-sidenav #sidenav>
-    <bb-menu (onMenuToggle)="sidenav.toggle() && toggleMobileIcon()"></bb-menu>
+  <mat-sidenav #sidenav
+               mode="over"
+               position="start"
+               (openedChange)="onMenuStateChange($event)"
+               (openedStart)="onMenuStateChange(true)">
+    <bb-menu (onMenuToggle)="sidenav.toggle()"></bb-menu>
   </mat-sidenav>
 
   <mat-sidenav-content>
@@ -17,6 +21,7 @@
 </mat-sidenav-container>
 
 <ng-template #menuTemplate>
-  <bb-header (onMenuToggle)="sidenav.toggle() && toggleMobileIcon()"
-             [isCloseIconShown]="isOpenMenuIconShown"></bb-header>
-<ng-template></ng-template>
+  <bb-header (onMenuToggle)="sidenav.toggle()"
+             [isIconShown]="isMenuOpened"
+             [isBlackOpenMenuIcon]="isContactsPage$ | async"></bb-header>
+</ng-template>

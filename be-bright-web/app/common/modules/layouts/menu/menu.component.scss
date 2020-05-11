@@ -22,8 +22,10 @@
     text-decoration: none;
     text-transform: uppercase;
     margin-bottom: 25px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
     &_active {
+      @include Text-Normal(18px, 21px, $color-black);
       text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       text-decoration: none;
     }
@@ -40,8 +42,6 @@
     top: 32px;
     width: 32px;
     height: 32px;
-    opacity: 0.3;
-    z-index: $layer-dropdown;
 
     &:before, &:after {
       position: absolute;

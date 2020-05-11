@@ -1,27 +1,46 @@
-<div class="container-fluid">
-  <div style="color: blue;">
-    <h1>{{title}}</h1>
-    <h3>{{description}}</h3>
+<section class="about-page">
+  <div class="about-page__logo-block">
+    <a [routerLink]="'/home'"
+       class="about-page__logo">
+      <img class="about-page__logo-img"
+           src="/assets/images/logo.svg"
+           alt="logo">
+    </a>
   </div>
-
-  <div style="width: 300px;">
-    <form (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="item">Item</label>
-        <input type="text" class="form-control"
-               placeholder="Enter content..." id="item"
-               required [(ngModel)]="itemValue" name="item">
+  <div class="about-page__content">
+    <div class="about-page__content-wrapper">
+      <div class="about-page__item">
+        <img class="about-page__item-icon"
+             src="/assets/images/phone.svg"
+             alt=""/>
+        <a class="about-page__item-text" href="tel: +38 050 218 15 96">
+          +38 050 218 15 96
+        </a>
       </div>
-
-      <div class="btn-group">
-        <button type="submit" class="btn btn-success">Submit</button>
+      <div class="about-page__item">
+        <img class="about-page__item-icon"
+             src="/assets/images/mail.svg"
+             alt=""/>
+        <a class="about-page__item-text" href="mailto: bebrightmedia@gmail.com">
+          bebrightmedia@gmail.com
+        </a>
       </div>
-    </form>
+      <div class="about-page__item">
+        <img class="about-page__item-icon"
+             src="/assets/images/instagram.svg"
+             alt=""/>
+        <a class="about-page__item-text" href="https://instagram.com/bebright__">
+          @bebrightmedia
+        </a>
+      </div>
+      <div class="about-page__item">
+        <img class="about-page__item-icon"
+             src="/assets/images/location.svg"
+             alt=""/>
+        <span class="about-page__item-text">
+          Kyiv, Ukraine
+        </span>
+      </div>
+    </div>
   </div>
-
-  <h2>Content from Firebase</h2>
-  <div class="col-md-3">
-    <pre *ngFor="let item of items | async">{{item.content}}</pre>
-  </div>
-
-</div>
+</section>

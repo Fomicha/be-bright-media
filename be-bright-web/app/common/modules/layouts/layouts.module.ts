@@ -6,6 +6,7 @@ import {RouterModule} from '@angular/router';
 import {MatSidenavModule} from '@angular/material';
 import {MenuComponent} from './menu/menu.component';
 import {MenuLinksService} from '../../services/menu-links.service';
+import {RouterService} from '../../services/router.service';
 
 @NgModule({
   imports: [
@@ -22,7 +23,10 @@ import {MenuLinksService} from '../../services/menu-links.service';
     HeaderComponent,
     WrapperComponent
   ],
-  providers: [MenuLinksService]
+  providers: [
+    MenuLinksService,
+    RouterService
+  ]
 })
 export class LayoutsModule {
 }

@@ -7,7 +7,8 @@
       <ng-template ngbSlide
                    class="home-page__slider-item"
                    *ngFor="let img of images">
-        <div class="home-page__dimmed-background"></div>
+        <div class="home-page__dimmed-background"
+             *ngIf="false"></div>
         <div class="home-page__img-wrapper"
              [style.background-image]="'url('+ img +')'">
           <a class="home-page__img-link-to-cat-page"

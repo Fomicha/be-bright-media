@@ -11,7 +11,7 @@ export class MenuLinksService {
     {link: '/events', linkName: 'events'},
     {link: '/video', linkName: 'video'},
     {link: '/other', linkName: 'other'},
-    {link: '/about', linkName: 'contacts'},
+    {link: '/about', linkName: 'contacts'}
   ];
 
   private linksSource = new BehaviorSubject<INavigationData[]>(this.navigations);

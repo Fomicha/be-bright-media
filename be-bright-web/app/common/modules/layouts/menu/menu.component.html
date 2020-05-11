@@ -3,6 +3,7 @@
     <a class="bb-menu__nav"
        *ngFor="let pages of navigationsLinks"
        [routerLink]="[pages.link]"
+       (click)="menuToggle()"
        routerLinkActive="bb-menu__nav_active">
       {{pages.linkName}}
     </a>

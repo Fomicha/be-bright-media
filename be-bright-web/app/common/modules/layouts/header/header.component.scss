@@ -59,6 +59,7 @@
 
     &_active {
       text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      color: $color-black;
     }
   }
 
@@ -94,6 +95,14 @@
 
     &:after {
       top: 10px;
+    }
+
+    &_black {
+      background-color: $color-icon;
+
+      &:before, &:after {
+        background-color: $color-icon;
+      }
     }
 
     @include breakpoint($media-small-desktop) {

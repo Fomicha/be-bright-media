@@ -1,21 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
+import {Router} from '@angular/router';
+import {RouterService} from '../../../services/router.service';
 
 @Component({
   selector: 'bb-wrapper',
   templateUrl: './wrapper.component.html',
   styleUrls: ['./wrapper.component.scss']
 })
-export class WrapperComponent implements OnInit {
+export class WrapperComponent {
 
-  isOpenMenuIconShown = true;
+  isMenuOpened = false;
 
-  constructor() { }
+  isContactsPage$: Observable<boolean> = this.router.events
+    .pipe(startWith(''))
+    .pipe(map(() => this.routerService.isPage('about')));
 
-  ngOnInit() {
+  constructor(private readonly router: Router,
+              private readonly routerService: RouterService) {
   }
 
-  toggleMobileIcon() {
-    this.isOpenMenuIconShown = !this.isOpenMenuIconShown;
+  onMenuStateChange(isOpened: boolean): void {
+    this.isMenuOpened = isOpened;
   }
-
 }

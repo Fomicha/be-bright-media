@@ -51,7 +51,7 @@ Thumbs.db
 # firebase
 .firebaserc
 .firebase
-farebase.json
+firebase.json
 firestore.rules
 database.rules.json
 

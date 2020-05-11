@@ -12,7 +12,10 @@ export class HeaderComponent implements OnInit {
   navigationsLinks: INavigationData[];
 
   @Input()
-  isCloseIconShown: boolean;
+  isBlackOpenMenuIcon: boolean;
+
+  @Input()
+  isIconShown: boolean;
 
   @Output()
   onMenuToggle = new EventEmitter<void>();

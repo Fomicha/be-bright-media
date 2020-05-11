@@ -10,8 +10,10 @@
     </div>
   </div>
   <div class="header__mobile-menu-wrapper"
+       *ngIf="!isIconShown"
        (click)="menuToggle()">
-    <div class="header__mobile-menu-icon"></div>
+    <div class="header__mobile-menu-icon"
+         [class.header__mobile-menu-icon_black]="isBlackOpenMenuIcon"></div>
   </div>
 </section>
 
