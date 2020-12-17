@@ -13,9 +13,9 @@ export class WrapperComponent {
 
   isMenuOpened = false;
 
-  isContactsPage$: Observable<boolean> = this.router.events
+  isNotHomePage$: Observable<boolean> = this.router.events
     .pipe(startWith(''))
-    .pipe(map(() => this.routerService.isPage('about')));
+    .pipe(map(() => this.routerService.isPage('home')));
 
   constructor(private readonly router: Router,
               private readonly routerService: RouterService) {
@@ -24,4 +24,5 @@ export class WrapperComponent {
   onMenuStateChange(isOpened: boolean): void {
     this.isMenuOpened = isOpened;
   }
+
 }

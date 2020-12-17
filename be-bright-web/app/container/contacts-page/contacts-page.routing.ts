@@ -3,7 +3,8 @@ import {ContactsPageComponent} from './contacts-page.component';
 
 const routes: Routes = [
   {
-    path: '', component: ContactsPageComponent,
+    path: '',
+    component: ContactsPageComponent,
     data: {
       meta: {
         title: 'Contacts',
@@ -13,5 +14,4 @@ const routes: Routes = [
     }
   }
 ];
-
 export const ContactsPageRoutes = RouterModule.forChild(routes);

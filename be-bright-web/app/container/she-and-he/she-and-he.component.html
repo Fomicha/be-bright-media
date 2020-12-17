@@ -1,1 +1,11 @@
-<p>she-and-he works!</p>
+<ngx-masonry class="masonry"
+             [options]="myOptions">
+  <div ngxMasonryItem
+       class="masonry__item"
+       *ngFor="let image of list">
+    <img
+      class="masonry__item-img"
+      src="{{image}}"
+      alt="">
+  </div>
+</ngx-masonry>

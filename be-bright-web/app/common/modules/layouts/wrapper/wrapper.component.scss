@@ -1,5 +1,12 @@
 @import "../../../sass/index";
 
-.wrapper {
+.mobile-logo {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 22px;
 
+  @include breakpoint($media-small-desktop) {
+    display: none;
+  }
 }

@@ -1,6 +1,10 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {INavigationData} from '../../../interfaces/navigation-data.interface';
 import {MenuLinksService} from '../../../services/menu-links.service';
+import {Observable} from 'rxjs';
+import {map, startWith} from 'rxjs/operators';
+import {Router} from '@angular/router';
+import {RouterService} from '../../../services/router.service';
 
 @Component({
   selector: 'bb-header',
@@ -18,9 +22,10 @@ export class HeaderComponent implements OnInit {
   isIconShown: boolean;
 
   @Output()
-  onMenuToggle = new EventEmitter<void>();
+  menuToggleOutput = new EventEmitter<void>();
 
-  constructor(private readonly menuLinksService: MenuLinksService) { }
+  constructor(private readonly menuLinksService: MenuLinksService) {
+  }
 
   ngOnInit() {
     this.menuLinksService.menuLinks
@@ -28,7 +33,7 @@ export class HeaderComponent implements OnInit {
   }
 
   menuToggle(): void {
-    this.onMenuToggle.emit();
+    this.menuToggleOutput.emit();
   }
 
 }

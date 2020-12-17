@@ -8,20 +8,22 @@
                position="start"
                (openedChange)="onMenuStateChange($event)"
                (openedStart)="onMenuStateChange(true)">
-    <bb-menu (onMenuToggle)="sidenav.toggle()"></bb-menu>
+    <bb-menu (menuToggleOutput)="sidenav.toggle()"></bb-menu>
   </mat-sidenav>
 
   <mat-sidenav-content>
+    <bb-logo class="mobile-logo"></bb-logo>
     <main role="main">
       <section>
         <router-outlet></router-outlet>
       </section>
     </main>
   </mat-sidenav-content>
+
 </mat-sidenav-container>
 
 <ng-template #menuTemplate>
-  <bb-header (onMenuToggle)="sidenav.toggle()"
+  <bb-header (menuToggleOutput)="sidenav.toggle()"
              [isIconShown]="isMenuOpened"
-             [isBlackOpenMenuIcon]="isContactsPage$ | async"></bb-header>
+             [isBlackOpenMenuIcon]="!(isNotHomePage$ | async)"></bb-header>
 </ng-template>

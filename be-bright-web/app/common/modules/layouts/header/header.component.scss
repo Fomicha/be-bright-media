@@ -10,15 +10,24 @@
     top: 0;
     left: 0;
     opacity: .95;
-    z-index: $material-overlay;
+    z-index: $layer-scroll;
     width: 100%;
     background-color: transparent;
-    align-items: unset;
-    height: 90px;
+    align-items: center;
+    height: 100px;
     justify-content: flex-end;
 
     @include breakpoint($media-small-desktop) {
       display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__desktop-logo {
+    display: none;
+
+    @include breakpoint($media-small-desktop) {
+      display: block;
     }
   }
 
@@ -28,7 +37,7 @@
     height: 100%;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 0 5%;
 
     @include breakpoint($media-small-desktop) {

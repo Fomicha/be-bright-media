@@ -1,0 +1,27 @@
+@import "../../../styles";
+
+.masonry {
+  display: flex;
+  width: 90%;
+  margin: 100px auto;
+
+  &__wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    padding: 5px;
+
+    @include breakpoint($media-tablet) {
+      width: 33%;
+    }
+  }
+
+  &__item-img {
+    width: 100%;
+  }
+}
+

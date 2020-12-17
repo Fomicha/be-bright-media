@@ -1,16 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule } from '@angular/core';
 import {AppRoutes} from './app.routing';
-import { AppComponent } from './app.component';
-
+import {AppComponent} from './app.component';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {environment} from '../environments/environment';
 import {SharedModule} from './common/modules/shared.module';
 import {MetaModule} from '@ngx-meta/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
 
 @NgModule({
   declarations: [
@@ -27,4 +24,5 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

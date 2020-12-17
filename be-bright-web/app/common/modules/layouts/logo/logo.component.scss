@@ -1,0 +1,20 @@
+@import "../../../sass/index";
+
+.logo {
+  display: flex;
+  justify-content: flex-end;
+
+  @include breakpoint($media-small-desktop) {
+    position: relative;
+    margin-top: 16px;
+  }
+
+  &__img {
+    width: 70%;
+
+    @include breakpoint($media-tablet) {
+      width: 100%;
+      padding-left: 2%;
+    }
+  }
+}

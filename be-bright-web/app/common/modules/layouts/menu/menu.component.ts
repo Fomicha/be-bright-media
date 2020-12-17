@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
   navigationsLinks: INavigationData[];
 
   @Output()
-  onMenuToggle = new EventEmitter<void>();
+  menuToggleOutput = new EventEmitter<void>();
 
   constructor(private readonly menuLinksService: MenuLinksService) { }
 
@@ -22,7 +22,7 @@ export class MenuComponent implements OnInit {
   }
 
   menuToggle(): void {
-    this.onMenuToggle.emit();
+    this.menuToggleOutput.emit();
   }
 
 }

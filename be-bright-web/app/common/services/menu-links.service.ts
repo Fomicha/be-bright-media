@@ -14,8 +14,8 @@ export class MenuLinksService {
     {link: '/about', linkName: 'contacts'}
   ];
 
-  private linksSource = new BehaviorSubject<INavigationData[]>(this.navigations);
+  private readonly linksSource = new BehaviorSubject<INavigationData[]>(this.navigations);
 
-  menuLinks = this.linksSource.asObservable();
+  readonly menuLinks = this.linksSource.asObservable();
 
 }

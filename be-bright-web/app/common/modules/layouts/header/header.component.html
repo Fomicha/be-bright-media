@@ -1,5 +1,7 @@
 <section class="header">
+
   <div class="header__container">
+    <bb-logo class="header__desktop-logo"></bb-logo>
     <div class="header__wrapper">
       <a class="header__nav"
          *ngFor="let pages of navigationsLinks"
@@ -9,11 +11,13 @@
       </a>
     </div>
   </div>
+
   <div class="header__mobile-menu-wrapper"
        *ngIf="!isIconShown"
        (click)="menuToggle()">
     <div class="header__mobile-menu-icon"
          [class.header__mobile-menu-icon_black]="isBlackOpenMenuIcon"></div>
   </div>
+
 </section>
 
